@@ -1,10 +1,10 @@
 html, body {
-  height: 100%;
+  height: 100%;  
   margin: 0;
 }
 
 body {
-  background: linear-gradient(#493868); 
+  background: linear-gradient(to bottom, #493868);  
   color: #d9e2f1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -12,6 +12,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh; 
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(to bottom, #493868); 
+  }
+}
+
 
 #sections {
   width: 90%;
