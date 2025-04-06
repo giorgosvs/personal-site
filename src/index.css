@@ -1,0 +1,263 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(#493868); 
+  color: #d9e2f1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh; 
+}
+
+#sections {
+  width: 90%;
+  max-width: 80rem;
+  margin: 3rem auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+}
+
+.section-item {
+  background-color: #1d1a16;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section-item h2 {
+  margin-bottom: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #ffc404;
+  font-size: 1.4rem;
+}
+
+.section-item a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d9e2f1;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.section-item a:hover {
+  color: #ffffff;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+}
+
+#sub-header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+}
+
+#main-header #title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#main-header #title img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+}
+
+#main-header button {
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 5;
+  color: #e0b72e;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  color: #1f1a09;
+}
+
+.link-button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #ffc404;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-button:hover,
+.link-button:active {
+  background-color: transparent;
+  border-color: #ffc404;
+  color: #ffab04;
+  text-decoration: underline;
+}
+
+nav.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.text-button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #ddc01e;
+}
+
+.text-button:hover {
+  color: #ffffff;
+}
+.text-button.active {
+  border-bottom: 2px solid #ffc404;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+  justify-content: center;
+}
+
+.chip {
+  background-color: #ffc404;
+  color: #1d1a16;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.chip.secondary {
+  background-color: #493868;
+  color: #d9e2f1;
+  border: 1px solid #ffc404;
+}
+
+.card {
+  background-color: #1d1a16;
+  color: #d9e2f1;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffc404;
+}
+
+.card-content h2 {
+  font-family: "Courier New", Courier, monospace;
+  color: #ffc404;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-info h2 {
+  font-family: Courier, monospace;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #ffc404;
+}
+
+.contact-info h4 {
+  font-family: Courier, monospace;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #e0b72e;
+}
+
+.contact-info p,
+.contact-info a {
+  font-size: 0.95rem;
+  color: #d9e2f1;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
