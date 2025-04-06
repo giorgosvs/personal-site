@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom, #493868);  
+  background: linear-gradient(#493868);  
   color: #d9e2f1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -15,7 +15,7 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    background: linear-gradient(to bottom, #493868); 
+    background: linear-gradient(#493868); 
   }
 }
 
