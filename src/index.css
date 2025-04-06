@@ -73,9 +73,17 @@ body {
 
 #main-header #title {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  align-items: center; 
+  gap: 1.5rem; 
+  padding: 0 1rem; 
 }
+
+#main-header #title h1 {
+  font-size: 2rem;
+  text-align: center; 
+  margin: 0.5rem 0; 
+}
+
 
 #main-header #title img {
   width: 4rem;
@@ -265,5 +273,21 @@ code {
 @media screen and (max-width: 768px) {
   body {
     background: #493868 !important; 
+  }
+}
+
+@media (max-width: 768px) {
+  #main-header #title {
+    display: flex;
+    flex-direction: column; /* Stack the headings vertically */
+    align-items: center; /* Center the text horizontally */
+    gap: 1.5rem; /* Add space between the elements */
+    padding: 0 1rem; /* Ensure padding on sides for mobile */
+  }
+
+  #main-header #title h1 {
+    font-size: 1.6rem; /* Reduce font size on mobile */
+    text-align: center; /* Center align text on mobile */
+    margin: 0.5rem 0; /* Add margin for spacing */
   }
 }
