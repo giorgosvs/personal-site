@@ -13,13 +13,6 @@ body {
   min-height: 100vh; 
 }
 
-@media screen and (max-width: 768px) {
-  html,body {
-    background: linear-gradient(#493868); 
-  }
-}
-
-
 #sections {
   width: 90%;
   max-width: 80rem;
@@ -267,4 +260,10 @@ nav.nav-center {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(#493868) !important; 
+  }
 }
