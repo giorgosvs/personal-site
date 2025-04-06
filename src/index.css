@@ -264,6 +264,6 @@ code {
 
 @media screen and (max-width: 768px) {
   body {
-    background: linear-gradient(#493868) !important; 
+    background: blue !important; 
   }
 }
