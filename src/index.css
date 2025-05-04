@@ -69,6 +69,7 @@ body {
   color: #ffffff;
 }
 
+
 #main-header {
   display: flex;
   justify-content: space-between;
@@ -117,6 +118,14 @@ h1 {
   color: #e0b72e;
   letter-spacing: 0.2rem;
   text-align: center;
+}
+
+.mobile-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .button {
