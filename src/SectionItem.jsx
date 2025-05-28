@@ -3,6 +3,13 @@ import { Button } from "./Button";
 import { motion } from "framer-motion";
 
 export const SectionItem = ({project,index}) => {
+
+  const formatDate = (dateStr) => {
+    const [month, year] = dateStr.split("/").map(Number);
+    const date = new Date(year, month - 1); // month is 0-based
+    return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(date);
+  };
+
   return (
     <motion.li
           key={index}
@@ -13,6 +20,7 @@ export const SectionItem = ({project,index}) => {
         >
       <article>
         <h2>{project.title}</h2>
+        <p className="project-date">{formatDate(project.date)}</p>
         <p>{project.description}</p>
 
         <div className="chip-group">
@@ -32,7 +40,7 @@ export const SectionItem = ({project,index}) => {
         </div>
         <p>
           <a href={project.link} target="_blank" rel="noreferrer">
-            <Button>View Code </Button>
+            <Button>View Code</Button>
           </a>
         </p>
       </article>

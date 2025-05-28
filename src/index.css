@@ -254,6 +254,13 @@ nav.nav-center {
   line-height: 1.6;
 }
 
+.project-date {
+  font-size: 0.9rem;
+  color: #e0b72e;
+  font-style: italic;
+  margin: 0.3rem 0 0.8rem;
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;

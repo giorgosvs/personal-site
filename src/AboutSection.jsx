@@ -10,7 +10,7 @@ export const AboutSection = () => {
       content={
         <>
           <p>
-            👋 Hola! I'm Giorgos - 27 years on Earth and counting.
+            👋 Hola! I'm Giorgos - 28 years on Earth and counting.
           </p>
           <p>
             I like everything about rhythm and music, cycling, sunny days, and
