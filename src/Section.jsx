@@ -35,7 +35,7 @@ const projects = [
     title: `"TuneFind"`,
     description: "A web application that integrates the iTunes API to search and browse music tracks, albums, artists, and podcasts",
     languages: ["JavaScript", "HTML", "CSS"],
-    stack: ["React","Material UI"],
+    stack: ["React + Vite","iTunes API"],
     link: "https://github.com/giorgosvs/TuneFind",
     date:"05/2025"
   },
