@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+
+import Typewriter from "typewriter-effect";
+import profileimg from "./assets/profileimg.jpeg";
 
 export const Header = ({ currentView, onChangeView }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -14,13 +18,11 @@ export const Header = ({ currentView, onChangeView }) => {
 
   const contentb = isMobile ? (
     <>
-      <h1>personal</h1>
-      <h1>portfolio</h1>
+      <h1>p e r s o n a l<br />portfolio</h1>
     </>
   ) : (
     <>
-      <div><h1>p e r s o n a l</h1></div>
-      <h1>portfolio</h1>
+      <h1>p e r s o n a l portfolio</h1>
     </>
   );
 
@@ -32,10 +34,45 @@ export const Header = ({ currentView, onChangeView }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div id="title" className={isMobile ? "mobile-center" : ""}>
-    {contentb}
-  </div>
+        <div
+          onClick={() => onChangeView("")}
+          id="title"
+          className={isMobile ? "mobile-center" : ""}
+        >
+          {contentb}
+        </div>
       </motion.header>
+      <AnimatePresence>
+        {currentView === "" && (
+          <motion.div
+            key="hero"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <section className="hero">
+              {/* <img src={profileimg} alt="Avatar" className="hero-avatar" /> */}
+
+              <h1 className="hero-main">Hi, I'm Giorgos.</h1>
+              <div className="typewriter-wrapper">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Web Developer.",
+                      "UI/UX Enthusiast.",
+                      "React Lover.",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    pauseFor: 2000,
+                  }}
+                />
+              </div>
+              <div className="typewriter-wrapper">...</div>
+            </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <header id="sub-header">
         <nav className="nav-center">
           <Button
@@ -60,6 +97,22 @@ export const Header = ({ currentView, onChangeView }) => {
             Contact Info
           </Button>
         </nav>
+        {/* {currentView === "" && (
+          <div className="typewriter-wrapper">
+            <Typewriter
+              options={{
+                strings: [
+                  "Web Developer.",
+                  "UI/UX Enthusiast.",
+                  "React Lover.",
+                ],
+                autoStart: true,
+                loop: true,
+                pauseFor: 2000,
+              }}
+            />
+          </div>
+        )} */}
       </header>
     </>
   );

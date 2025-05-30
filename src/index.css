@@ -13,15 +13,23 @@ body {
   min-height: 100vh; 
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 1.8rem;
+.hero {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   text-align: center;
-  color: #e0b72e;
-  font-family: "Lato", sans-serif;
 }
+
+.hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+  margin: 1.5rem auto;
+  display: block;
+  object-fit: cover;
+}
+
+
 
 
 #sections {
@@ -74,13 +82,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding: 2rem 10%;
 }
 
 #sub-header {
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding:3rem 10%;
 }
 
 #main-header #title {
@@ -94,6 +102,20 @@ body {
   font-size: 2rem;
   text-align: center; 
   margin: 0.5rem 0; 
+}
+
+#main-header #title h1:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.typewriter-wrapper {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e0ded7;
+  text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 
@@ -169,7 +191,7 @@ nav.nav-center {
   display: flex;
   justify-content: center;
   gap: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .text-button {
@@ -310,6 +332,11 @@ code {
     align-items: center; /* Center the text horizontally */
     gap: 1.5rem; /* Add space between the elements */
     padding: 0 1rem; /* Ensure padding on sides for mobile */
+  }
+
+  .typewriter-wrapper {
+    font-size: 1.5rem;
+    padding: 0 1rem;
   }
 
   #main-header #title h1 {
